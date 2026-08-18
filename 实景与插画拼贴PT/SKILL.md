@@ -1,6 +1,6 @@
 ---
 name: pt-v2-0
-description: "Transform a user-supplied photo into a vertical 3:5 Gathered Scenes Zine poster that anchors truthful photography inside a spacious source-derived abstract illustration field, aggressively compresses dense foliage and other micro-detail into a few large quiet forms, integrates one high-chroma hue as compositional structure, and preserves a visibly hand-torn fibrous photo-to-paper edge. Use when the user wants a tactile minimal paper collage with simplified illustration, active negative space, restrained English-default, Chinese, or bilingual micro-text, and an unmistakable but quiet torn-paper boundary."
+description: "Transform a user-supplied photo into a vertical 3:5 Gathered Scenes Zine poster that anchors truthful photography inside a spacious source-derived abstract illustration field, aggressively compresses dense foliage and other micro-detail into a few large quiet forms, integrates one high-chroma hue as compositional structure, and preserves a visibly hand-torn fibrous photo-to-paper edge. Use when the user wants a tactile minimal paper collage with simplified illustration, active negative space, optional user-supplied micro-text, and an unmistakable but quiet torn-paper boundary."
 ---
 
 # 实景与插画拼贴 · PT v2.0
@@ -29,7 +29,7 @@ Resolve conflicts in this order:
 6. Use the added hue as chromatic structure that changes balance, movement, figure–ground, or meaning.
 7. Preserve substantial quiet space inside and around the enlarged illustration.
 8. Preserve a tactile hand-torn photo edge at the primary material handoff.
-9. Add a limited, source-aware micro-text element according to the text or English I provided, without weakening the image hierarchy. If it is not provided, it is not in text or English by default.
+9. Do not add micro-text by default. Include a micro-text element only when the user explicitly supplies text or asks for text to be added, keeping it limited and source-aware without weakening the image hierarchy.
 
 Preserve relationships before details. Remove detail before adding decoration.
 
@@ -71,7 +71,7 @@ Resolve these visible fields in order:
 8. **Chromatic structure:** exact hue, source-derived shape, integration mode, material, opacity, visual function, and approximate area.
 9. **Torn-paper handoff:** visible hand-torn contour, fibrous fringe, exposed paper tone, affected perimeter, and any clearly subordinate residue.
 10. **Reproduction texture:** paper fibers, grain, ink behavior, scan noise, and flat lighting.
-11. **Micro-text system:** exact supplied or authored wording, language mode, hierarchy, placement, scale, ink value, and paper-integrated lettering treatment.
+11. **Micro-text system (only if user supplies text):** exact supplied wording, language mode, hierarchy, placement, scale, ink value, and paper-integrated lettering treatment. Skip entirely if the user has not provided text or explicitly asked for text.
 12. **Mood and hard avoids:** emotional temperature and prohibited aesthetics.
 
 Compile only instructions that can become visible pixels. Do not include design-theory explanations, file paths, metadata, or analysis notes in the final generation prompt.
@@ -255,41 +255,22 @@ Mentally remove the added hue. If the eye path, visual balance, figure–ground 
 - Let photography, illustration, and chromatic structure share at least one source-derived contour, axis, rhythm, or field.
 - Keep paper texture subordinate to the abstract forms and negative space.
 - Keep the result flat and orthographic with diffuse light and no artificial 3D depth.
-- Add only the one micro-text element defined below; it is a quiet editorial trace, never a headline.
+- Add a micro-text element only when the user explicitly supplies text or asks for text; never add auto-authored text by default. When included, it is a quiet editorial trace, never a headline.
 
-## Micro-Text System
+## Micro-Text System (Optional, User-Supplied Only)
 
-Text is a standard, subtle part of this version's poster language. It should feel discovered on the paper rather than designed over the image.
+Text is an optional element that only appears when the user explicitly provides text content or asks for text to be added. Do not author or invent text automatically. When text is supplied, it should feel discovered on the paper rather than designed over the image.
 
 ### Choose the Wording
 
 - If the user supplies text, reproduce it exactly; do not translate, expand, rewrite, add a subtitle, or append attribution.
-- Otherwise, author one compact line from the supplied scene: either a concrete scene-related phrase or a very short, widely resonant poetic thought. Do not invent a named quotation or attribute it to anyone.
 - Support three language modes: **Chinese-only**, **English-only**, or a **Chinese–English pairing**.
-- Use **English-only by default**. Switch to Chinese-only or a Chinese–English pairing only when the user explicitly supplies that wording or requests that language mode.
+- Follow the user's language preference from the supplied text. Do not default to any language when no text is provided.
 - Chinese text must contain **8 Han characters or fewer**. English text must contain **5 words or fewer**. In a bilingual pairing, apply both limits independently and keep the two lines semantically connected.
 - English may take one of three forms: **one standalone word**, **a keyword sequence**, or **a very short phrase**. A complete sentence is not required.
 - Prefer spare, evocative language over explanation, advertising, dates, place names, labels, captions, or complete narrative sentences.
-- Let the text answer a real visual cue: weather, object, season, time, movement, light, distance, touch, or silence in the scene.
-
-### Default Direction When No Text Is Supplied
-
-Choose **an observed feeling, not metadata**. Unless the user specifies otherwise, write one English-only line that names the scene's quiet emotional residue rather than documenting when or where it happened.
-
-Use this selection order:
-
-1. **Standalone scene word:** use one concrete or atmospheric word when the image has a strong singular subject or mood. Examples: `Horizon`, `Rain`, `Stillness`, `Drift`, `Shelter`.
-2. **Keyword sequence:** choose two to four visible or atmospheric words and connect them with one repeated separator system. Examples: `Cloud / Ridge / Silence`, `Glass · Light · Summer`, `Rain, Window & Night`.
-3. **Very short phrase:** use a compact image-related phrase when movement or emotional direction matters more than naming. Examples: `After the rain`, `Falling light`, `Almost home`.
-
-- Use concrete scene language for ordinary, documentary, object-led, or place-led photos. Use an emotional fragment for solitary figures, dusk, rain, travel, waiting, distance, or visibly contemplative scenes.
-- For a keyword sequence, prefer nouns and restrained adjectives drawn from visible subjects, materials, weather, place atmosphere, motion, or light. Keep the total at five English words or fewer.
-- Choose one separator style only: comma, centered dot `·`, slash `/`, or ampersand `&`. Use commas with a final ampersand when a natural editorial cadence helps. Do not mix several decorative separator styles in one line.
-- Treat punctuation as spacing and rhythm, not as ornament. Keep generous space around `·`, `/`, and `&`; preserve commas close to the preceding word.
-- Do not switch away from English because of the scene's mood, location, or subject. Language mode follows the user's instruction; visual character affects wording and typography, not the default language.
-- When the user requests a Chinese–English pairing, make one language the quiet primary line and the other a smaller echo. Do not make both lines equal headlines. The two lines may be close translations or complementary fragments, but they must describe the same visual feeling.
-- Do not use a date, time, address, coordinates, weather readout, archive stamp, or serial number by default. Use them only when the user explicitly asks or when the source itself makes that record-like information the essential subject.
-- Do not force a famous quotation. A small original phrase that belongs to this image is usually more convincing than a recognizable line borrowed from elsewhere.
+- Do not use a date, time, address, coordinates, weather readout, archive stamp, or serial number unless the user explicitly asks or supplies such content.
+- Do not force a famous quotation. If the user does not supply text, include no text at all.
 
 ### Lettering and Material
 
@@ -306,18 +287,19 @@ Use this selection order:
 
 - Place the text in an existing quiet-paper area beneath, beside, offset from, or within a quiet pocket of the enlarged illustration—not on a face, defining subject, or dense printed area.
 - Align it to a source edge, torn photo edge, dominant axis, or visual baseline; leave generous breathing room around it.
-- Use a single line for Chinese-only or English-only by default. Use two closely related short lines for a bilingual pairing, with clear primary–secondary scale hierarchy.
+- Use a single line for Chinese-only or English-only text. Use two closely related short lines for a bilingual pairing, with clear primary–secondary scale hierarchy.
 - Treat the text as a final resting point in the eye path, not the entry point or focal center. Keep its visual weight below the chromatic structure and far below the core subject.
 - Do not add decorative rules, icons, labels, serial numbers, addresses, timestamps, or pseudo-editorial metadata merely to support the text.
 
 ## Prompt Shape
 
-Write the final prompt as four compact paragraphs:
+Write the final prompt as compact paragraphs:
 
-1. **Canvas and attention geometry:** ratio, layout, photo/illustration shares, focal area, quiet field, eye path, and reserved text area.
+1. **Canvas and attention geometry:** ratio, layout, photo/illustration shares, focal area, quiet field, and eye path.
 2. **Scene fidelity:** core subjects, spatial invariants, and what remains photographic.
-3. **Illustration field, chromatic structure, torn edge, and micro-text:** retain/merge/omit/transform/expose decisions; illustration grammar, complexity-compression target, field extent, and active density; chromatic integration mode, source shape, exact hue, material, opacity, function, and area; visible hand-torn contour, fibrous band, affected perimeter, and subordinate residue; exact text, language mode, form, separator, hierarchy, lettering, ink value, scale, and placement.
-4. **Reproduction mood and constraints:** paper/scan texture, emotional atmosphere, text legibility, and hard avoids.
+3. **Illustration field, chromatic structure, and torn edge:** retain/merge/omit/transform/expose decisions; illustration grammar, complexity-compression target, field extent, and active density; chromatic integration mode, source shape, exact hue, material, opacity, function, and area; visible hand-torn contour, fibrous band, affected perimeter, and subordinate residue.
+4. **Micro-text (only if user supplied text):** exact text, language mode, form, separator, hierarchy, lettering, ink value, scale, and placement. Omit this paragraph entirely when no text is provided.
+5. **Reproduction mood and constraints:** paper/scan texture, emotional atmosphere, and hard avoids.
 
 Use decisive language. State which details must disappear as clearly as which forms must remain.
 
@@ -332,8 +314,8 @@ Use decisive language. State which details must disappear as clearly as which fo
 7. Choose one primary illustration grammar; apply foliage and micro-detail compression when needed, enlarge the field before increasing detail, then set active density and quiet-paper share.
 8. Choose one chromatic integration mode, exact hue, source shape, material, opacity, function, and area; apply the structural removal test.
 9. Build a visible hand-torn fibrous edge at the main photo–paper handoff; set its contour, fiber band, affected perimeter, and only then add any subordinate speckles or ghost marks.
-10. Determine the language mode, text form, accurate micro-text, separator system, hierarchical structure and static paper position; If no text and English are provided, no text and English will be added.
-11. Compile the four-paragraph final prompt.
+10. If the user has explicitly supplied text or asked for text, determine the language mode, text form, separator system, hierarchy, and paper placement; if no text was provided or requested, skip this step entirely and add no text.
+11. Compile the final prompt (four or five paragraphs depending on whether text is included).
 12. Generate with the supplied photo as reference.
 13. Inspect at normal and thumbnail scale.
 14. Regenerate once with a targeted correction if necessary.
@@ -354,12 +336,13 @@ Regenerate at most once, correcting only the observed failure:
 - **Edge noise:** keep the torn fiber primary, reduce all other residue, confine speckles or ghost marks to one or two pressure points, and restore blank paper.
 - **Decorative color:** replace the detached mark with a source-derived continuation, replacement, underprint, counterform, or directional rhythm; make it pass the structural removal test.
 - **Chromatic dominance:** reduce area, opacity, or competing echoes while preserving the color's compositional function.
-- **Text failure:** restore the exact wording, reduce its size or contrast, move it into a quiet-paper area, or make the lettering more paper-integrated.
+- **Unwanted text appeared:** remove all text, lettering, words, and pseudo-text marks entirely when the user did not supply text.
+- **Text failure (when text was supplied):** restore the exact wording, reduce its size or contrast, move it into a quiet-paper area, or make the lettering more paper-integrated.
 - **Damaged photography:** restore natural color, texture, perspective, and recognizable detail.
 
 ## Hard Avoids
 
-Avoid literal traced illustration, individual leaf-by-leaf or needle-by-needle rendering, dense branch filigree, lace-like botanical illustration, repeated organic marks covering the field, timid peripheral illustration, full-scene photocopy, evenly detailed woodcut rendering, dense hatching everywhere, complete object outlines, filler decoration, generic abstract motifs, detached corner color blocks, isolated brush swatches, arbitrary bright dots, generic geometric accents unrelated to the source, color added after the composition is solved, clean digital photo masks, crisp rectangular clipping, sticker-like white outlines, decorative uniform deckled frames, heavy paper shadows, curled corners, dense scrapbooking, uniform dotted borders, repeated decorative icons, legible pseudo-symbol systems, multiple competing illustration styles, multiple added hues, commercial advertising hierarchy, logos, CTA, glossy mockups, neon, 3D, cinematic lighting, depth of field, fashion-editorial drama, cute cartoon or anime treatment, excessive sharpening, AI smoothing, large or polished digital typography, bold display all-caps, keyword spam, mixed decorative separators, illegible or misspelled text, long text blocks, invented quotations or attributions, faux metadata, and watermarks.
+Avoid literal traced illustration, individual leaf-by-leaf or needle-by-needle rendering, dense branch filigree, lace-like botanical illustration, repeated organic marks covering the field, timid peripheral illustration, full-scene photocopy, evenly detailed woodcut rendering, dense hatching everywhere, complete object outlines, filler decoration, generic abstract motifs, detached corner color blocks, isolated brush swatches, arbitrary bright dots, generic geometric accents unrelated to the source, color added after the composition is solved, clean digital photo masks, crisp rectangular clipping, sticker-like white outlines, decorative uniform deckled frames, heavy paper shadows, curled corners, dense scrapbooking, uniform dotted borders, repeated decorative icons, legible pseudo-symbol systems, multiple competing illustration styles, multiple added hues, commercial advertising hierarchy, logos, CTA, glossy mockups, neon, 3D, cinematic lighting, depth of field, fashion-editorial drama, cute cartoon or anime treatment, excessive sharpening, AI smoothing, large or polished digital typography, bold display all-caps, keyword spam, mixed decorative separators, auto-authored or invented text when the user did not supply any, illegible or misspelled text, long text blocks, invented quotations or attributions, faux metadata, and watermarks.
 
 ## Output Format
 
@@ -423,13 +406,10 @@ Before returning, verify:
 - Does the chromatic structure satisfy at least two integration tests?
 - Would removing the added hue weaken balance, movement, figure–ground, continuity, or meaning?
 - Is the color structurally useful without becoming a detached sticker or dominant advertising device at thumbnail size?
-- Does the micro-text use supplied wording exactly, or stay within the Chinese/English length limit when authored?
-- Is the text English-only by default, with Chinese-only or bilingual used only when the user supplied or requested it?
-- If English was authored, is it a deliberate standalone word, keyword sequence, or short phrase rather than an unnecessary sentence?
-- If a keyword sequence is used, does it contain two to four scene-related words with one consistent separator system?
-- If bilingual, is one line clearly subordinate and are both lines semantically connected?
-- Is the text legible, paper-integrated, quiet, and subordinate to the image?
-- Is the text placed in genuine breathing room without becoming a caption, headline, or visual distraction?
+- When the user did not supply text or ask for text, is the poster completely free of any text, lettering, words, or pseudo-text marks?
+- When the user supplied text, is it reproduced exactly, within the Chinese/English length limit, and using the user's language preference?
+- If the user supplied text, is it legible, paper-integrated, quiet, and subordinate to the image?
+- If the user supplied text, is it placed in genuine breathing room without becoming a caption, headline, or visual distraction?
 - Does the poster remain tactile, flat, quiet, abstract, source-derived, and non-commercial?
 - Did the response include the image and one genuinely brief creative rationale?
 - On only the first or second successful generation by this skill in the current conversation, did the response end with the quiet sharing-credit line outside the generated image—and was it omitted from the third and later generations?
